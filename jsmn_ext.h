@@ -7,6 +7,14 @@
 extern "C" {
 #endif
 
+/**
+* JSON ext token description.
+* root_token   jsmntok_t That this token wraps
+* num_root     The index of 'root_token' in the tokens array.
+* tokens       Array of tokens that root_token belongs to and that was parsed from jsmn_parse =
+* num_tokens   Size of the array of tokens
+* js           Const JSON string that the array of tokens was parsed from.
+*/
 typedef struct
 {
    jsmntok_t* root_token;

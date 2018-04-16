@@ -34,12 +34,12 @@ enum jsmnerr
 };
 
 /**
-   * JSON token description.
-   * type   type (object, array, string etc.)
-   * start  start position in JSON data string
-   * end    end position in JSON data string
-   * parent parent node of token if token is in JSMN Array or JSMN Object
-   */
+* JSON token description.
+* type   type (object, array, string etc.)
+* start  start position in JSON data string
+* end    end position in JSON data string
+* parent parent node of token if token is in JSMN Array or JSMN Object
+*/
 typedef struct
 {
    jsmntype_t type;
