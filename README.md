@@ -64,3 +64,8 @@
  value at a specific index returns the value at that index.
  
  When the root token of a jsmntok_ext token is neither a JSMN_ARRAY nor JSMN_OBJECT, then neither of the above functions will do anything... they will return < 0.
+
+ JSMN Notes
+ -------------
+ JSMN tokens represent a span of the parsed input string. i.e. in the JSON Object `{ "Key1": "val1" }`, a token represents all 19 characters of the JSON object. That token will be a JSMN_Object type and its tok->start=0 and tok->end=19. i.e. The token just indicates the starting character of the token,
+ and the ending character of the token in the input JSON Character array(string). Furthermore, another token would represent `"Key1"` and it would be a JSMN_String, start=3, end=7. (Note that on JSMN_Strings, the span does not include the quotes)
